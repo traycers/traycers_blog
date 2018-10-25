@@ -1,2 +1,6 @@
-# traycers_blog
-It's my first application. I want to make a blog.
+# My first web application
+
+It's my blog. I'll describe my ideas.
+todo:
+* save first template
+* discover slim and sass
