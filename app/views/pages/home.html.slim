@@ -1,0 +1,16 @@
+doctype html
+html
+  head
+    title Slim Examples
+
+  body
+    h1 Main page
+
+    #content
+      p Convallis accumsan, cursus sit amet, ipsum. In pharetra sagittis nunc.
+        Donec consequat mi. Quisque vitae dolor. Integer lobortis. Maecenas id nulla. Lorem.
+
+    div.tickets-box
+    - rand(5..10).times do |i|
+        div.ticket go to page ##{i + 1}
+
