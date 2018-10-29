@@ -1,6 +1,8 @@
 # My first web application
 
 It's my blog. I'll describe my ideas.
-todo:
-* save first template
-* discover slim and sass
+
+###todo:
+- [x] save first template
+- [x] discover slim and sass
+- [] 
