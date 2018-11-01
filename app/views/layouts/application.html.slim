@@ -7,15 +7,22 @@ html
     = csp_meta_tag 
     = stylesheet_link_tag    'application', media: 'all' 
     = javascript_include_tag 'application' 
+    / Include bootstrap 4
+    = stylesheet_link_tag    'https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css'
 
   body
-    ul.menu
-      li = link_to 'Главная', root_path
-      li = link_to 'Обо мне', about_path
+    /* Navigation menu */
+    nav class="navbar navbar-expand-lg navbar-light bg-light"
+      a = link_to 'Главная', root_path
+      div class="collapse navbar-collapse" id="navbarNav"
+        ul class="navbar-nav"
+          li class="nav-item" = link_to 'Обо мне', about_path, class:"nav-link"
+          li class="nav-item" = link_to 'Обо мне', about_path, class:"nav-link"
 
+    /* Content */
     = yield
 
     footer
-    p Footer:<br>Здесь будет копирайт на текущий-следующий год
+      p Footer:<br>Здесь будет копирайт на текущий-следующий год
 
 
