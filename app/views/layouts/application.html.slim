@@ -1,0 +1,21 @@
+doctype html
+html
+  head
+    title Блог для моих заметок
+    meta charset='utf-8'
+    = csrf_meta_tags 
+    = csp_meta_tag 
+    = stylesheet_link_tag    'application', media: 'all' 
+    = javascript_include_tag 'application' 
+
+  body
+    ul.menu
+      li = link_to 'Главная', root_path
+      li = link_to 'Обо мне', about_path
+
+    = yield
+
+    footer
+    p Footer:<br>Здесь будет копирайт на текущий-следующий год
+
+
