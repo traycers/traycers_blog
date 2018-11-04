@@ -1,16 +1,11 @@
-doctype html
-html
-  head
-    title Slim Examples
+h2 Блог для моих заметок
 
-  body
-    h1 Main page
-
-    #content
-      p Convallis accumsan, cursus sit amet, ipsum. In pharetra sagittis nunc.
-        Donec consequat mi. Quisque vitae dolor. Integer lobortis. Maecenas id nulla. Lorem.
-
-    div.tickets-box
-    - rand(5..10).times do |i|
-        div.ticket go to page ##{i + 1}
-
+- rand(3..7).times.each do |i|
+  br
+  div.card
+    div class="card-header"
+      p = BetterLorem.w rand 1..3
+    div class="card-body"
+      p class="card-text" =BetterLorem.w rand 1..31
+      a href="#" class="btn btn-primary" Читать дальше
+  br
