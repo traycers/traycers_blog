@@ -1,0 +1,27 @@
+doctype html
+html
+  head
+    title Блог для моих заметок
+    meta charset='utf-8'
+    = csrf_meta_tags 
+    = csp_meta_tag 
+    = stylesheet_link_tag    'application', media: 'all' 
+    = javascript_include_tag 'application' 
+    / Include bootstrap 4
+    = stylesheet_link_tag    'https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css'
+
+  body
+    /* Navigation menu */
+    nav class="navbar navbar-expand-lg navbar-light bg-light"
+      a = link_to 'Главная', root_path
+      div class="collapse navbar-collapse" id="navbarNav"
+        ul class="navbar-nav"
+          li class="nav-item" = link_to 'О проекте', project_path, class:"nav-link"
+          li class="nav-item" = link_to 'Обо мне', about_path, class:"nav-link"
+
+    /* Content */
+    = yield
+
+    footer.footer
+      div.container
+        span class="text-muted" Здесь будет копирайт на текущий-следующий год

@@ -3,5 +3,6 @@ Rails.application.routes.draw do
   # see http://guides.rubyonrails.org/routing.html
 
   root 'pages#home'
-  get 'about' => 'pages#about'
+  get 'about', to: 'pages#about'
+  get 'project', to: 'pages#project'
 end
