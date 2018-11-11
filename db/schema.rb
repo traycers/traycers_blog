@@ -29,7 +29,7 @@ ActiveRecord::Schema.define(version: 2018_11_11_194551) do
   create_table "posts", force: :cascade do |t|
     t.string "header"
     t.text "body"
-    t.integer "type"
+    t.integer "content"
     t.boolean "visible"
     t.bigint "user_id"
     t.datetime "created_at", null: false
