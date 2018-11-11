@@ -8,5 +8,14 @@ class CreateComments < ActiveRecord::Migration[5.2]
 
       t.timestamps
     end
+
+    create_table :marks do |t|
+      t.integer :value, default: 0
+      t.references :user, foreign_key: true
+      t.references :post, foreign_key: true
+
+      t.timestamps
+    end
   end
+
 end
