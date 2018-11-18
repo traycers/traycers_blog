@@ -1,6 +1,7 @@
 class Post < ApplicationRecord
   belongs_to :user
   has_many :comments, dependent: :destroy
+  has_many :commentators, through: :comments, source: :user
   # Заготовка для генерации html из markdown содержимого поста
   # возможно стоит добавить html & css?
   enum content: %i[text md]
