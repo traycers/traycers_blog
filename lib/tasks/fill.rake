@@ -35,7 +35,7 @@ namespace :db do
     #make some comments
     users = User.all
     posts = Post.all
-    comments_quantity = rand 10..30
+    comments_quantity = 1_000
     comments_quantity.times.each do
       u = users.sample
       p = posts.sample

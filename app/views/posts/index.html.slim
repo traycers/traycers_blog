@@ -9,6 +9,7 @@ table
       th Name
       th Body
       th Time
+      th Post quantity
 
   tbody
     - @posts.each do |post|
@@ -16,6 +17,7 @@ table
         td = post.header
         td = post.body[0..30]
         td = post.created_at
+        td = post.comments.size
         td = link_to 'Show', post
         td = link_to 'Edit', edit_post_path(post)
         td = link_to 'Destroy', post, data: { confirm: 'Are you sure?' }, method: :delete

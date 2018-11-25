@@ -10,6 +10,8 @@ class PostsController < ApplicationController
   # GET /posts/1
   # GET /posts/1.json
   def show
+    @comments2 = @post.comments.page(params[:page]).per(3)
+    @post_quantity = @post.comments.size
   end
 
   # GET /posts/new

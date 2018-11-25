@@ -9,11 +9,16 @@ p
   strong = @post.header
 p = @post.body
 
-p
-  strong Comments:
+- if @comments2.any?
+  p
+    strong Comments(#{@post_quantity}):
 
-- @post.comments.order(:created_at).each do |i|
-  p = i.body
-  p = i.created_at
-  p = i.user.name
-  br
+    table
+      - @comments2.each do |i|
+        tr
+          td: b = i.user.name
+          td = i.body
+          td = i.id
+
+  - if @post_quantity > 2
+    p = paginate @comments2
