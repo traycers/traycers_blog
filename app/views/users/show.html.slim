@@ -1,0 +1,16 @@
+p#notice = notice
+
+p Id:
+p = @user.id
+p Name:
+p = @user.name
+p Email:
+p = @user.email
+p Is moderator
+p = @user.moderator ? 'yes' : 'no'
+p Is banned
+p = @user.banned ? 'yes' : 'no'
+
+=> link_to 'Edit', edit_user_path(@user)
+'|
+=< link_to 'Back', users_path

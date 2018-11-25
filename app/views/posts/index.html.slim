@@ -1,0 +1,22 @@
+h2 Listing posts
+
+= link_to 'New Post', new_post_path
+br
+
+table
+  thead
+    tr
+      th Name
+      th Body
+      th Time
+
+  tbody
+    - @posts.each do |post|
+      tr
+        td = post.header
+        td = post.body[0..30]
+        td = post.created_at
+        td = link_to 'Show', post
+        td = link_to 'Edit', edit_post_path(post)
+        td = link_to 'Destroy', post, data: { confirm: 'Are you sure?' }, method: :delete
+
