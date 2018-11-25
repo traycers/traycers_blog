@@ -1,4 +1,4 @@
-require 'betterlorem'
+require 'faker'
 
 class PagesController < ApplicationController
   def home
