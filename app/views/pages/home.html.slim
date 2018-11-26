@@ -1,11 +1,11 @@
-h2 Блог для моих заметок
+h3 Случайные посты:
 
-- rand(3..7).times.each do |i|
-  br
-  div.card
-    div class="card-header"
-      p = BetterLorem.w rand 1..3
-    div class="card-body"
-      p class="card-text" =BetterLorem.w rand 1..31
-      a href="#" class="btn btn-primary" Читать дальше
-  br
+table.table
+  - @posts.each do |i|
+    div.card
+      div.card-body
+        div.card-title
+					p = i.header
+        div.card-text
+					p = i.body
+        = link_to "Читать далее", i,  class: 'btn btn-primary btn-sm'

@@ -1,0 +1,23 @@
+p#notice = notice
+
+=> link_to 'Edit', edit_post_path(@post), :class => 'btn btn-outline-primary'
+'|
+=< link_to 'Back', posts_path, :class => 'btn btn-outline-primary'
+
+p #{@post.user.name} wrote this at #{@post.created_at}
+p
+  strong = @post.header
+p = @post.body
+
+- if @comments2.any?
+  p
+    strong Comments(#{@post_quantity}):
+
+    table
+      - @comments2.each do |i|
+        tr
+          td: b = i.user.name
+          td = i.body
+
+  - if @post_quantity > 2
+    p = paginate @comments2, theme: 'twitter-bootstrap-4'

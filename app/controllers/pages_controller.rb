@@ -1,7 +1,6 @@
-require 'betterlorem'
-
 class PagesController < ApplicationController
   def home
+    @posts = Post.limit(5).order("RANDOM()")
   end
 
   def about
