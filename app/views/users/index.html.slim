@@ -1,9 +1,9 @@
 h2 Listing users
 
-= link_to 'New User', new_user_path
+= link_to 'Создать пользователя', new_user_path, :class => 'btn btn-outline-dark'
 br
 
-table
+table.table
   thead
     tr
       th Id
@@ -16,7 +16,8 @@ table
         td = user.id
         td = user.name
         td = user.email
-        td = link_to 'Show', user
-        td = link_to 'Edit', edit_user_path(user)
-        td = link_to 'Destroy', user, data: { confirm: 'Are you sure?' }, method: :delete
+        td = link_to 'Show', user, :class => 'btn btn-outline-primary'
+        td = link_to 'Edit', edit_user_path(user), :class => 'btn btn-outline-primary'
+        td = link_to 'Destroy', user, data: { confirm: 'Are you sure?' }, method: :delete, :class => 'btn btn-danger btn-mini'
 
+p = paginate @users, theme: 'twitter-bootstrap-4'

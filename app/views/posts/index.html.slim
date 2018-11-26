@@ -1,9 +1,9 @@
 h2 Listing posts
 
-= link_to 'New Post', new_post_path
+= link_to 'Создать пост', new_post_path, :class => 'btn btn-outline-dark'
 br
 
-table
+table.table
   thead
     tr
       th Name
@@ -18,10 +18,10 @@ table
         td = post.body[0..30]
         td = post.created_at
         td = post.comments.size
-        td = link_to 'Show', post
-        td = link_to 'Edit', edit_post_path(post)
-        td = link_to 'Destroy', post, data: { confirm: 'Are you sure?' }, method: :delete
+        td = link_to 'Show', post, :class => 'btn btn-outline-primary'
+        td = link_to 'Edit', edit_post_path(post), :class => 'btn btn-outline-primary'
+        td = link_to 'Destroy', post, data: { confirm: 'Are you sure?' }, method: :delete, :class => 'btn btn-danger btn-mini'
 
 br
 
-p = paginate @posts
+p = paginate @posts, theme: 'twitter-bootstrap-4'

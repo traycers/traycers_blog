@@ -14,6 +14,7 @@ require "sprockets/railtie"
 # require "rails/test_unit/railtie"
 require "slim"
 require "kaminari"
+require 'faker'
 
 # Require the gems listed in Gemfile, including any gems
 # you've limited to :test, :development, or :production.
