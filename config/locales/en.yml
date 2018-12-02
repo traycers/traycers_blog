@@ -48,10 +48,12 @@ en:
     log_out: 'Log out'
     sign_in: 'Sign in'
     sign_out: 'Sign out'
+    sign_up: 'Sign up'
     back: 'back'
     show: 'show'
     edit: 'edit'
     del: 'delete'
+    update: 'Update'
   user:
     list: 'Listing users'
     new: 'make a new user'
