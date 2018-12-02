@@ -30,4 +30,48 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  title: 'Blog of my notices'
+  time:
+    formats:
+      default: "%Y.%m.%d %I:%M"
+  navi:
+    main: 'Main page'
+    users: 'Users'
+    posts: 'Posts'
+    about: 'About'
+  main:
+    read_post: 'read continue'
+    content: 'Random posts'
+  label:
+    footer: 'copyright to 2019'
+    log_in: 'Log in'
+    log_out: 'Log out'
+    sign_in: 'Sign in'
+    sign_out: 'Sign out'
+    back: 'back'
+    show: 'show'
+    edit: 'edit'
+    del: 'delete'
+  user:
+    list: 'Listing users'
+    new: 'make a new user'
+    editing: 'Editing user'
+    form:
+      make: 'Create user'
+      update: 'Update user'
+      name: 'Name'
+      email: 'Email'
+      moderator: 'Moderator'
+      banned: 'Banned'
+  post:
+    list: 'Listing posts'
+    new: 'make a new post'
+    editing: 'Editing post'
+    table:
+      time: 'Time'
+      comments: 'Post quantity'
+    form:
+      header: 'Header'
+      body: 'Body'
+      visible: 'visible'
+      user: 'user id'

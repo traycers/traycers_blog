@@ -35,5 +35,8 @@ module Blog
 
     config.generators.template_engine = :slim
     config.sass.preferred_syntax = :sass
+    config.i18n.default_locale = :ru
+    config.time_zone = 'Moscow'
+    config.i18n.available_locales = [:ru, :en]
   end
 end

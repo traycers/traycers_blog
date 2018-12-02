@@ -10,4 +10,8 @@ Rails.application.routes.draw do
   get 'about', to: 'pages#about'
   get 'project', to: 'pages#project'
   get 'pages(/:page)', to: 'pages#index'
+
+  scope "(:lang)", locale: /ru|en/ do
+      root to: 'pages#home'
+  end
 end

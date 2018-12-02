@@ -1,14 +1,14 @@
-h2 Listing users
+h2 = t('user.list')
 
-= link_to 'Создать пользователя', new_user_path, :class => 'btn btn-outline-dark'
+= link_to t('user.new'), new_user_path, :class => 'btn btn-outline-dark'
 br
 
 table.table
   thead
     tr
       th Id
-      th Name
-      th Email
+      th = t('user.form.name')
+      th = t('user.form.email')
 
   tbody
     - @users.sort.each do |user|
@@ -16,8 +16,8 @@ table.table
         td = user.id
         td = user.name
         td = user.email
-        td = link_to 'Show', user, :class => 'btn btn-outline-primary'
-        td = link_to 'Edit', edit_user_path(user), :class => 'btn btn-outline-primary'
-        td = link_to 'Destroy', user, data: { confirm: 'Are you sure?' }, method: :delete, :class => 'btn btn-danger btn-mini'
+        td = link_to t('label.show'), user, :class => 'btn btn-outline-primary'
+        td = link_to t('label.edit'), edit_user_path(user), :class => 'btn btn-outline-primary'
+        td = link_to t('label.destroy'), user, data: { confirm: 'Are you sure?' }, method: :delete, :class => 'btn btn-danger btn-mini'
 
 p = paginate @users, theme: 'twitter-bootstrap-4'
