@@ -9,6 +9,8 @@ html
     = javascript_include_tag 'application' 
 
   body
+    = render 'shared/header'
+
     /* Navigation menu */
     nav class="navbar navbar-expand-lg navbar-light bg-light"
       a = link_to 'Главная', root_path

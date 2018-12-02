@@ -13,9 +13,7 @@ rand(5..15).times.each do |i|
   u = User.new
   u.name      = Faker::Name.unique.name
   u.email     = Faker::Internet.email u.name
-  u.password  = 'Qw4asdZXC'
-  u.moderator = true if rand(4) == 2
-  u.creator   = true if rand(2) == 1
+  u.password  = :Qw4asdZXC
   u.save
 
   # make some posts
