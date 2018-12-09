@@ -1,5 +1,8 @@
 h3 = t('main.content')
 
+= render "components/page/page" do
+  p Hello from our first component!
+
 table.table
   - @posts.each do |i|
     div.card
