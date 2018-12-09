@@ -11,16 +11,17 @@ require 'faker'
 # make some users
 rand(5..15).times.each do |i|
   u = User.new
-  u.name = Faker::Name.unique.name
-  u.email = Faker::Internet.email u.name
+  u.name      = Faker::Name.unique.name
+  u.email     = Faker::Internet.email u.name
+  u.password  = :Qw4asdZXC
   u.save
 
   # make some posts
   rand(2..7).times.each do |y|
     p = Post.new
-    p.user = u
-    p.header = Faker::Lorem.sentence
-    p.body = Faker::Lorem.paragraph rand(1..4)
+    p.user    = u
+    p.header  = Faker::Lorem.sentence
+    p.body    = Faker::Lorem.paragraph rand(1..4)
     p.content = 0
     p.save
   end

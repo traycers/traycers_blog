@@ -1,0 +1,12 @@
+header
+  ul
+    - if user_signed_in?
+      li
+        span "#{current_user.name} (#{current_user.email})"
+      li
+        = link_to t('label.sign_out'), destroy_user_session_path, method: :delete
+    - else
+      li
+        = link_to t('label.sign_in'), new_user_session_path
+      li
+        = link_to t('label.sign_up'), new_user_registration_path

@@ -1,4 +1,4 @@
-h3 Случайные посты:
+h3 = t('main.content')
 
 table.table
   - @posts.each do |i|
@@ -8,4 +8,4 @@ table.table
 					p = i.header
         div.card-text
 					p = i.body
-        = link_to "Читать далее", i,  class: 'btn btn-primary btn-sm'
+        = link_to t('main.read_post'), i,  class: 'btn btn-primary btn-sm'

@@ -1,26 +1,26 @@
-h2 Listing posts
+h2 = t('post.list')
 
-= link_to 'Создать пост', new_post_path, :class => 'btn btn-outline-dark'
+= link_to t('post.new'), new_post_path, :class => 'btn btn-outline-dark'
 br
 
 table.table
   thead
     tr
-      th Name
-      th Body
-      th Time
-      th Post quantity
+      th = t('post.form.header')
+      th = t('post.form.body')
+      th = t('post.table.time')
+      th = t('post.table.comments')
 
   tbody
     - @posts.each do |post|
       tr
         td = post.header
         td = post.body[0..30]
-        td = post.created_at
+        td = l( post.created_at )
         td = post.comments.size
-        td = link_to 'Show', post, :class => 'btn btn-outline-primary'
-        td = link_to 'Edit', edit_post_path(post), :class => 'btn btn-outline-primary'
-        td = link_to 'Destroy', post, data: { confirm: 'Are you sure?' }, method: :delete, :class => 'btn btn-danger btn-mini'
+        td = link_to t('label.show'), post, :class => 'btn btn-outline-primary'
+        td = link_to t('label.edit'), edit_post_path(post), :class => 'btn btn-outline-primary'
+        td = link_to t('label.del'), post, data: { confirm: 'Are you sure?' }, method: :delete, :class => 'btn btn-danger btn-mini'
 
 br
 

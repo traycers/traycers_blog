@@ -1,7 +1,7 @@
 doctype html
 html
   head
-    title Блог для моих заметок
+    title = t('title')
     meta charset='utf-8'
     = csrf_meta_tags 
     = csp_meta_tag 
@@ -9,18 +9,20 @@ html
     = javascript_include_tag 'application' 
 
   body
+    = render 'shared/header'
+
     /* Navigation menu */
     nav class="navbar navbar-expand-lg navbar-light bg-light"
-      a = link_to 'Главная', root_path
+      a = link_to t('navi.main'), root_path
       div class="collapse navbar-collapse" id="navbarNav"
         ul class="navbar-nav"
-          li class="nav-item" = link_to 'Пользователи', users_path, class:"nav-link"
-          li class="nav-item" = link_to 'Посты', posts_path, class:"nav-link"
-          li class="nav-item" = link_to 'Обо мне', about_path, class:"nav-link"
+          li class="nav-item" = link_to t('navi.users'), users_path, class:"nav-link"
+          li class="nav-item" = link_to t('navi.posts'), posts_path, class:"nav-link"
+          li class="nav-item" = link_to t('navi.about'), about_path, class:"nav-link"
 
     /* Content */
     = yield
 
     footer.footer
       div.container
-        span class="text-muted" Здесь будет копирайт на текущий-следующий год
+        span class="text-muted" = t('label.footer')

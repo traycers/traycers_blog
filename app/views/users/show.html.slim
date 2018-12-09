@@ -3,15 +3,15 @@ p#notice = notice
 
 p Id:
 p = @user.id
-p Name:
+p = t('user.form.name')
 p = @user.name
-p Email:
+p = t('user.form.email')
 p = @user.email
-p Is moderator
-p = @user.moderator ? 'yes' : 'no'
-p Is banned
-p = @user.banned ? 'yes' : 'no'
+p = t('user.form.moderator')
+p = @user.moderator ? t('label.yes') : t('label.no')
+p = t('user.form.banned')
+p = @user.banned ? t('label.yes') : t('label.no')
 
-=> link_to 'Edit', edit_user_path(@user), :class => 'btn btn-outline-primary'
+=> link_to t('label.edit'), edit_user_path(@user), :class => 'btn btn-outline-primary'
 '|
-=< link_to 'Back', users_path, :class => 'btn btn-outline-primary'
+=< link_to t('label.back'), users_path, :class => 'btn btn-outline-primary'

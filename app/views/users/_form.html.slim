@@ -7,19 +7,19 @@
           li = message
 
   .field
-    = f.label :name
+    = f.label t('user.form.name')
     = f.text_field :name
 
   .field
-    = f.label :email
+    = f.label t('user.form.email')
     = f.text_field :email
 
   .field
-    = f.label :moderator
+    = f.label t('user.form.moderator')
     = f.check_box :moderator
 
   .field
-    = f.label :banned
+    = f.label t('user.form.banned')
     = f.check_box :banned
 
   .actions = f.submit
